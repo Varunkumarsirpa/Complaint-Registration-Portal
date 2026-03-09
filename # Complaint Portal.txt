@@ -1,0 +1,69 @@
+# Complaint Portal
+
+## Overview
+The Complaint Portal is a **Spring Boot-based web application** that allows users to register complaints and enables administrators to manage and update complaint statuses. It also integrates **email notifications** to confirm complaint registrations.
+
+This project demonstrates a full-stack Spring Boot application with **MySQL database**, **JPA/Hibernate**, **REST APIs**, and **email integration**. The UI is built using **HTML and Bootstrap** for a responsive and user-friendly interface.
+
+---
+
+## Features
+
+### User Features
+- Register complaints with **name, email, and complaint message**.
+- Receive **email confirmation** after registering a complaint.
+- Track the status of submitted complaints.
+
+### Admin Features
+- View all complaints in a **dashboard**.
+- Update the status of complaints.
+- Send **automatic email notifications** to users on status updates.
+
+---
+
+## Technology Stack
+- **Backend:** Java 17, Spring Boot, Spring Data JPA, Hibernate
+- **Database:** MySQL / MariaDB
+- **Frontend:** HTML, Bootstrap, Thymeleaf (optional)
+- **Email Service:** Spring Boot Mail with Gmail SMTP
+- **Build Tool:** Maven
+- **Version Control:** Git & GitHub
+
+---
+
+## Database Schema
+**Database Name:** `complaint_portal`
+
+**Table:** `complaint`
+| Column     | Type       | Description                  |
+|-----------|-----------|------------------------------|
+| id        | bigint    | Primary key, auto-increment  |
+| name      | varchar   | Name of the person           |
+| email     | varchar   | Email address of the person  |
+| complaint | varchar   | Complaint message            |
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Java 17
+- Maven
+- MySQL or MariaDB
+- Git
+
+spring.datasource.url=jdbc:mysql://localhost:3306/complaint_portal
+spring.datasource.username=root
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=update
+
+## Admin Dashboard
+
+Open the admin page locally after starting the Spring Boot app:
+
+[Admin Dashboard](http://localhost:8080/admin.html)
+
+Complaint Registration : http://localhost:8080/
+
+
+mvn spring-boot:run
